@@ -1,12 +1,16 @@
 import React from 'react';
 
-const BillCard = ({ bill }) => {
+const BillCard = ({ id, name, health, bill, salary, rating, catchphrase, photo, handleCasting, actor }) => {
+  
+  function handleClick () {
+    handleCasting(actor)
+  }
   return (
     <div className="ui column">
       <div
         className="ui card"
         key={bill.id}
-        onClick={() => console.log('add code to connect event listener')}
+        onClick={(handleClick) => console.log(handleClick)}
       >
         <div className="image">
           <img alt={bill.name} src={bill.photo} />
